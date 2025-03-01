@@ -83,7 +83,8 @@ func parseContent(content string, msgType consts.MsgType) string {
 		var contentMap map[string]interface{}
 		err := json.Unmarshal([]byte(content), &contentMap)
 		if err != nil {
-			fmt.Println(err)
+			hlog.Errorf("error unmarshalling content: %v", err)
+			return ""
 		}
 		if contentMap["text"] == nil {
 			return ""
@@ -93,7 +94,8 @@ func parseContent(content string, msgType consts.MsgType) string {
 	} else if msgType == consts.MsgTypePost {
 		result, err := pkg.ExtractTextFromFeishuMessage(content)
 		if err != nil {
-			fmt.Println(err)
+			hlog.Errorf("error extracting text from feishu message: %v", err)
+			return ""
 		}
 		return msgFilter(result)
 	}

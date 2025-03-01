@@ -36,7 +36,6 @@ type FeishuConfig struct {
 	AppEncryptKey        string `yaml:"app_encrypt_key"`
 	AppVerificationToken string `yaml:"app_verification_token"`
 	BotName              string `yaml:"bot_name"`
-	UnionID              string `yaml:"union_id"`
 }
 
 // WeixinConfig 微信配置
