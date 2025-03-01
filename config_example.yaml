@@ -1,0 +1,26 @@
+# 机器人配置, 这里只做飞书示例，如果需要其它接入，欢迎提 mr
+bot: 
+  feishu: 
+    enable: true
+    app_id: cli_xxxxx
+    app_secret: abc
+    app_encrypt_key: abc
+    app_verification_token: abc
+    bot_name: abc
+  weixin: 
+    enable: false
+  dingtalk: 
+    enable: false
+  
+# ai模型配置
+ai:
+  openai: # openai
+    enable: false
+    api_key: sk-xxxx
+    model: gpt-4o-mini
+    api_url: https://api.openai.com/v1
+  volc: # 火山引擎
+    enable: true
+    api_key: xyz
+    model: xyz
+    api_url: xyz
