@@ -225,7 +225,7 @@ func (f *FeishuClient) FeishuUpdateCardSetting(ctx context.Context, cardId strin
 	req := larkcardkit.NewSettingsCardReqBuilder().
 		CardId(cardId).
 		Body(larkcardkit.NewSettingsCardReqBodyBuilder().
-			Settings(`{"config":{"streaming_mode":false,"enable_forward":true,"update_multi":true,"width_mode":"fill","enable_forward_interaction":false},"card_link":{"url":"https://applink.feishu.cn/T8UcoLiLPJyV","android_url":"https://applink.feishu.cn/T8UcoLiLPJyV","ios_url":"https://applink.feishu.cn/T8UcoLiLPJyV","pc_url":"https://applink.feishu.cn/T8UcoLiLPJyV"}}`).
+			Settings(`{"config":{"streaming_mode":false,"enable_forward":true,"update_multi":true,"width_mode":"fill","enable_forward_interaction":false},"card_link":{"url":"","android_url":"","ios_url":"","pc_url":""}}`).
 			Uuid(uuid.New().String()).
 			Sequence(pkg.NextSequence()).
 			Build()).
